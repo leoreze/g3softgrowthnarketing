@@ -1,0 +1,39 @@
+{
+  "name": "g3soft-growth-os",
+  "version": "1.0.20",
+  "private": true,
+  "description": "G3Soft Growth OS — Growth Command Center with 180-day roadmap, execution evidence, approvals and full CRUD.",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "db:migrate": "node src/db/migrate.js",
+    "db:seed": "node src/db/seed.js",
+    "db:setup": "node src/db/setup.js",
+    "db:reset": "node src/db/reset.js",
+    "check": "node --check src/server.js && node --check src/app.js && node --check src/routes/auth.js && node --check src/routes/approvals.js && node --check src/routes/content.js && node --check src/routes/calendar-events.js && node --check src/routes/notifications.js && node --check src/services/automation.js && node --check public/js/app.js",
+    "test": "node --test",
+    "build": "npm run check",
+    "verify": "npm run check && npm test",
+    "db:bootstrap": "node src/db/bootstrap.js",
+    "db:status": "node src/db/status.js",
+    "env:status": "node -r ./src/config/env.js src/config/env-status.js",
+    "db:doctor": "node src/db/doctor.js",
+    "db:auth-check": "node src/db/auth-check.js",
+    "db:seed:roadmap": "node src/db/seed-roadmap.js",
+    "clean:legacy": "node scripts/clean-legacy.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-pg-simple": "^10.0.0",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.0.1",
+    "helmet": "^8.1.0",
+    "pg": "^8.16.3",
+    "express-session": "^1.18.2"
+  }
+}

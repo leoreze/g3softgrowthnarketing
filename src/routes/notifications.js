@@ -1,0 +1,6 @@
+const express=require('express');const pool=require('../db/pool');const {requireAuth}=require('../middleware/auth');const {uuid}=require('../validators/common');
+const router=express.Router();router.use(requireAuth);
+router.get('/',async(req,res,next)=>{try{const limit=Math.min(50,Math.max(1,Number(req.query.limit)||30));const r=await pool.query(`SELECT * FROM notifications WHERE user_id=$1 ORDER BY created_at DESC LIMIT $2`,[req.user.id,limit]);const unread=(await pool.query(`SELECT COUNT(*)::int count FROM notifications WHERE user_id=$1 AND read_at IS NULL`,[req.user.id])).rows[0].count;res.json({data:r.rows,meta:{unread}})}catch(e){next(e)}});
+router.patch('/:id/read',async(req,res,next)=>{try{const id=uuid(req.params.id);const r=await pool.query(`UPDATE notifications SET read_at=COALESCE(read_at,NOW()) WHERE id=$1 AND user_id=$2 RETURNING *`,[id,req.user.id]);if(!r.rowCount)return res.status(404).json({error:'NOT_FOUND',message:'Notificação não encontrada.'});res.json({data:r.rows[0]})}catch(e){next(e)}});
+router.post('/read-all',async(req,res,next)=>{try{await pool.query(`UPDATE notifications SET read_at=NOW() WHERE user_id=$1 AND read_at IS NULL`,[req.user.id]);res.status(204).end()}catch(e){next(e)}});
+module.exports=router;

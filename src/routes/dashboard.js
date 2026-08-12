@@ -1,0 +1,1 @@
+const express=require('express');const {requireAuth}=require('../middleware/auth');const {summary}=require('../services/dashboard');const router=express.Router();router.use(requireAuth);router.get('/summary',async(req,res,next)=>{try{res.json({data:await summary()});}catch(e){next(e)}});module.exports=router;

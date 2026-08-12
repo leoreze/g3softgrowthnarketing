@@ -1,0 +1,4 @@
+const test=require('node:test');const assert=require('node:assert/strict');const fs=require('fs');const path=require('path');
+const root=path.join(__dirname,'..');
+test('v0.8.0 analytics route and executive view are wired',()=>{const app=fs.readFileSync(path.join(root,'src','app.js'),'utf8');const route=fs.readFileSync(path.join(root,'src','routes','analytics.js'),'utf8');const ui=fs.readFileSync(path.join(root,'public','js','app.js'),'utf8');const html=fs.readFileSync(path.join(root,'public','index.html'),'utf8');assert.match(app,/\/api\/analytics/);assert.match(route,/router\.get\('\/'/);assert.match(html,/data-view="analytics"/);assert.match(ui,/analytics:renderAnalytics/);assert.match(ui,/function renderAnalytics\(\)/)});
+test('v0.8.0 does not introduce inline style for analytics',()=>{const ui=fs.readFileSync(path.join(root,'public','js','app.js'),'utf8');assert.equal(/style\s*=/.test(ui),false);assert.equal(/\.style\./.test(ui),false)});
