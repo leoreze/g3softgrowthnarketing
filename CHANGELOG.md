@@ -1,3 +1,28 @@
+<<<<<<< HEAD
+=======
+## v0.2.0 — Landing Page Engine
+
+### Premium visual refresh
+- Hero redesenhado com fotografia humana em composição editorial full-bleed; mockups 3D removidos do banner principal.
+- Mockups 3D de laptop e smartphone reposicionados para uma seção de produto dedicada, usando exclusivamente preto, branco, cinza e laranja G3Soft.
+- Ícones SVG ampliados e tratados como elementos visuais principais das propostas de valor.
+- Header e footer redesenhados com contraste alto e aplicação consistente da marca.
+- Gradientes, halos e profundidade usados de forma controlada para um resultado premium e clean.
+- 13 LPs continuam compartilhando a mesma engine, com narrativa, fotografia e conteúdo por rota.
+
+
+- Landing Page Engine reutilizável construída sobre a base estável `v1.0.22`.
+- 5 LPs de produto: G3ERP, G3Control, G3Food, G3Pedidos e G3Small.
+- 6 LPs de segmento: Varejo, Supermercados, Restaurantes, Lojas, Conveniências e Multilojas.
+- Experiência interativa `Descubra seu G3`.
+- Calculadora de Perdas.
+- Template único orientado por configuração, evitando duplicação de código.
+- Tracking local preparado para `page_view`, `cta_click`, `form_submit`, diagnóstico e calculadora.
+- Layout premium, responsivo/mobile-first e compatível com CSP sem estilos inline.
+- Nenhuma migration ou operação destrutiva de banco.
+- A versão de plataforma permanece `1.0.22` para preservar a suíte de regressão existente.
+
+>>>>>>> 3c06acf (feat: integrate G3Soft institutional site and landing pages)
 ## v1.0.22 — Diagnostic Intelligence Workspace
 
 - Diagnóstico 360° promovido a módulo central do Growth OS.
@@ -319,3 +344,30 @@ v0.7.4 — Roadmap Phase Modal & Unified Modal Footer
 - Menus do Planejador de conteúdo passam à frente dos cards vizinhos.
 - Menus de Campanhas escapam do recorte interno do card quando abertos.
 - Nenhuma migration nova.
+<<<<<<< HEAD
+=======
+
+## Landing Page Engine v0.2.0 — compatibility fix
+
+- Preserves platform version 1.0.22.
+- Keeps Landing Page Engine at module release v0.2.0.
+- Removes the stray root-level metadata test that incorrectly required platform version 0.2.1.
+- Preserves remote database and production safety checks.
+
+## Landing Page Engine v0.2.0 — Premium Conversion & SEO
+
+- Reworked the 13 landing pages with a clean premium SaaS visual language inspired by modern business/IT landing-page hierarchy.
+- Added richer segment/product-specific copywriting, pain/solution narratives, benefits, features, process and FAQ content.
+- Added server-rendered title, meta description and canonical URL per landing route through `public/landing/landing-seo.json`.
+- Added Open Graph metadata and semantic conversion-oriented headings.
+- Added responsive laptop + mobile device mockups, motion, reveal transitions and reduced-motion support.
+- Preserved CSP safety, shared landing engine architecture and the `1.0.22` platform version.
+- No database migration or destructive operation introduced.
+
+## Landing Page Engine visual refinement
+- Realigned the landing pages to the G3Soft black/white/orange brand identity.
+- Bundled local human photography so hero sections render without external image-CDN dependency.
+- Enlarged and upgraded SVG topic icons.
+- Strengthened laptop + phone 3D mockup composition over real people imagery.
+- Kept the shared engine, routes, CSP and platform version unchanged.
+>>>>>>> 3c06acf (feat: integrate G3Soft institutional site and landing pages)

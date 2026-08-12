@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /g3soft
+Allow: /g3soft/

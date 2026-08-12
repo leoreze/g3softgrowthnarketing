@@ -1,0 +1,54 @@
+{
+  "g3erp": {
+    "title": "G3ERP | Sistema de gestão empresarial para empresas em crescimento",
+    "description": "Conheça o G3ERP da G3Soft: gestão empresarial integrada para vendas, estoque, financeiro, fiscal, relatórios e operações em crescimento."
+  },
+  "g3control": {
+    "title": "G3Control | Dashboard e inteligência para gestão empresarial",
+    "description": "G3Control é a camada de inteligência da G3Soft para dashboards, KPIs, análises e acompanhamento executivo da operação."
+  },
+  "g3food": {
+    "title": "G3Food | Sistema de gestão para restaurantes e food service",
+    "description": "Conheça o G3Food da G3Soft para restaurantes, lanchonetes e operações de food service: pedidos, atendimento, produção, delivery e gestão conectados."
+  },
+  "g3pedidos": {
+    "title": "G3Pedidos | Sistema para gestão de pedidos e atendimento",
+    "description": "G3Pedidos organiza pedidos, atendimento, status, operação e acompanhamento para varejo, food service e negócios com alto volume."
+  },
+  "g3small": {
+    "title": "G3Small | Sistema de gestão simples para pequenas empresas",
+    "description": "G3Small é uma solução de gestão simples para pequenas empresas, com vendas, estoque, caixa, financeiro e relatórios."
+  },
+  "varejo": {
+    "title": "Sistema para varejo | Gestão de vendas, estoque e financeiro | G3Soft",
+    "description": "Sistema de gestão para varejo com vendas, estoque, caixa, financeiro, relatórios e suporte à expansão."
+  },
+  "supermercados": {
+    "title": "Sistema para supermercado | Estoque, vendas e gestão | G3Soft",
+    "description": "Solução de gestão para supermercados e mercados com estoque, compras, vendas, financeiro, margem e relatórios."
+  },
+  "restaurantes": {
+    "title": "Sistema para restaurante | Pedidos, delivery e gestão | G3Soft",
+    "description": "Sistema para restaurantes com pedidos, atendimento, produção, delivery, financeiro e relatórios."
+  },
+  "lojas": {
+    "title": "Sistema para lojas | Vendas, estoque e financeiro | G3Soft",
+    "description": "Sistema de gestão para lojas com vendas, estoque, caixa, clientes, financeiro e relatórios."
+  },
+  "conveniencias": {
+    "title": "Sistema para conveniência | PDV, estoque e financeiro | G3Soft",
+    "description": "Gestão para lojas de conveniência, postos e minimercados com PDV, estoque, vendas, caixa e financeiro."
+  },
+  "multilojas": {
+    "title": "Sistema para multilojas | Gestão centralizada de redes | G3Soft",
+    "description": "Sistema de gestão para multilojas, redes e franquias com visão consolidada, vendas, estoque, financeiro e indicadores."
+  },
+  "descubra-seu-g3": {
+    "title": "Descubra seu G3 | Diagnóstico de solução de gestão G3Soft",
+    "description": "Faça o diagnóstico G3Soft e descubra qual solução de gestão combina com seu segmento, porte e principal desafio."
+  },
+  "calculadora-de-perdas": {
+    "title": "Calculadora de perdas empresariais | G3Soft",
+    "description": "Estime perdas anuais com retrabalho, desperdícios e custos operacionais e descubra onde sua empresa pode buscar mais eficiência."
+  }
+}
