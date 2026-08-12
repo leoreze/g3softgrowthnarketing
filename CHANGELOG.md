@@ -1,3 +1,28 @@
+## v1.0.22 — Diagnostic Intelligence Workspace
+
+- Diagnóstico 360° promovido a módulo central do Growth OS.
+- Nova análise com período, tipo e objetivo.
+- Cadastro de sites, páginas, landing pages, redes sociais, Google Business, SEO, mídia paga, YouTube, CRM, Analytics, concorrentes, produtos, ICP e personas.
+- Entrada de métricas quantitativas por fonte.
+- Registro e validação de evidências.
+- Score de maturidade + confiança dos dados.
+- Histórico de análises com Abrir, Comparar, Duplicar e Exportar.
+- Snapshot aprovado bloqueado server-side; continuidade via duplicação.
+- IA contextual ampliada para fontes, métricas e evidências.
+- Testes de regressão preservados e ampliados.
+
+## v1.0.21 — Diagnóstico 360° + IA
+
+- Nova área Diagnóstico 360° integrada ao Growth OS.
+- Score 0–100 com 10 dimensões e critérios ponderados.
+- Evidências, notas, status e prioridades P0–P3.
+- Plano de ações do diagnóstico.
+- Revisão e aprovação do diagnóstico.
+- Integração server-side com OpenAI para análise executiva e chat contextual.
+- Nova migration aditiva 018.
+- UI premium responsiva em português do Brasil.
+- Testes específicos de regressão e segurança da integração de IA.
+
 ## 1.0.20 — Preparação GitHub + Render
 
 - Preparação do projeto para o repositório `leoreze/g3softgrowthnarketing`.

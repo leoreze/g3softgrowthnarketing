@@ -36,5 +36,5 @@ test('v1.0.1 production roadmap migration is additive and append-only', () => {
   assert.match(migration, /task_subtasks/);
   assert.match(migration, /ON CONFLICT\(campaign_id,phase_order\)/);
   assert.doesNotMatch(migration, /DROP\s+(TABLE|SCHEMA|DATABASE)/i);
-  const migrations=fs.readdirSync(path.join(root,'src/db/migrations')).filter(f => f.endsWith('.sql')).sort(); assert.ok(migrations.includes('013_task_execution_deliverables.sql')); assert.equal(migrations.at(-1), '017_execution_schema_reconciliation.sql'); assert.ok(migrations.includes('014_task_execution_center.sql'));
+  const migrations=fs.readdirSync(path.join(root,'src/db/migrations')).filter(f => f.endsWith('.sql')).sort(); assert.ok(migrations.includes('013_task_execution_deliverables.sql')); assert.equal(migrations.at(-1), '019_diagnostic_workspace.sql'); assert.ok(migrations.includes('014_task_execution_center.sql'));
 });

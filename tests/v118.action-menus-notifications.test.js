@@ -13,7 +13,7 @@ test('v1.0.18 overview phase cards do not render CRUD menus',()=>assert.match(ap
 test('v1.0.18 action menus close outside and expose ARIA state',()=>{assert.match(app,/aria-expanded/);assert.match(app,/document\.addEventListener\('click'/);assert.match(app,/bindActionMenus\(\)/)});
 test('v1.0.18 notifications are premium list items with Portuguese labels',()=>{assert.match(app,/notification-item-premium/);assert.match(app,/notification-unread/);assert.match(app,/Marcar como lida/);assert.match(app,/ptNotificationType/);assert.match(css,/\.notification-item-premium/);assert.match(css,/\.notification-empty-premium/)});
 test('v1.0.18 action menus have premium contrast styling',()=>{assert.match(css,/\.action-menu-trigger/);assert.match(css,/\.action-menu-wrap\.is-open \.action-menu/);assert.match(css,/\.action-menu-item\.danger/)});
-test('v1.0.18 menu baseline accepts current patch version',()=>assert.match(JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version,/^1\.0\.(?:18|19|20)$/));
+test('v1.0.18 menu baseline accepts current patch version',()=>assert.match(JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version,/^1\.0\.(?:18|19|20|21|22)$/));
 
 test('v1.0.18 task execution actions and workflow actions use contextual menus',()=>{
   assert.match(app,/Ações da tarefa/);

@@ -14,7 +14,7 @@ test('v1.0.11 migration is environment-agnostic and does not refuse remote or pr
 
 test('v1.0.11 removes the local-only preparation command',()=>{
   const pkg=JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8'));
-  assert.match(pkg.version,/^1\.0\.(?:11|12|14|15|16|17|18|19|20)$/);
+  assert.match(pkg.version,/^1\.0\.(?:11|12|14|15|16|17|18|19|20|21|22)$/);
   assert.equal(pkg.scripts['local:prepare'],undefined);
   assert.equal(fs.existsSync(path.join(root,'src/db/local-prepare.js')),false);
 });

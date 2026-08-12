@@ -1,8 +1,8 @@
 {
   "name": "g3soft-growth-os",
-  "version": "1.0.20",
+  "version": "1.0.22",
   "private": true,
-  "description": "G3Soft Growth OS — Growth Command Center with 180-day roadmap, execution evidence, approvals and full CRUD.",
+  "description": "G3Soft Growth OS — Growth Command Center with 180-day roadmap, execution evidence, approvals, CRUD and 360° Diagnostic Intelligence Workspace.",
   "main": "src/server.js",
   "scripts": {
     "dev": "node --watch src/server.js",

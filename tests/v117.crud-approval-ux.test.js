@@ -82,6 +82,6 @@ test('v1.0.17 content planner keeps native drag and drop and Portuguese statuses
 
 test('v1.0.18 version baseline accepts current patch and previous migrations are untouched',()=>{
   const pkg=JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8'));
-  assert.match(pkg.version,/^1\.0\.(?:18|19|20)$/);
+  assert.match(pkg.version,/^1\.0\.(?:18|19|20|21|22)$/);
   for(let i=1;i<=17;i++) assert.ok(fs.existsSync(path.join(root,'src/db/migrations',String(i).padStart(3,'0')+'_'+fs.readdirSync(path.join(root,'src/db/migrations')).find(x=>x.startsWith(String(i).padStart(3,'0')+'_')).split('_').slice(1).join('_'))));
 });
