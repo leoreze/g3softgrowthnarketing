@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 ## v0.2.0 — Landing Page Engine
 
 ### Premium visual refresh
@@ -22,7 +20,6 @@
 - Nenhuma migration ou operação destrutiva de banco.
 - A versão de plataforma permanece `1.0.22` para preservar a suíte de regressão existente.
 
->>>>>>> 3c06acf (feat: integrate G3Soft institutional site and landing pages)
 ## v1.0.22 — Diagnostic Intelligence Workspace
 
 - Diagnóstico 360° promovido a módulo central do Growth OS.
@@ -344,8 +341,6 @@ v0.7.4 — Roadmap Phase Modal & Unified Modal Footer
 - Menus do Planejador de conteúdo passam à frente dos cards vizinhos.
 - Menus de Campanhas escapam do recorte interno do card quando abertos.
 - Nenhuma migration nova.
-<<<<<<< HEAD
-=======
 
 ## Landing Page Engine v0.2.0 — compatibility fix
 
@@ -370,4 +365,3 @@ v0.7.4 — Roadmap Phase Modal & Unified Modal Footer
 - Enlarged and upgraded SVG topic icons.
 - Strengthened laptop + phone 3D mockup composition over real people imagery.
 - Kept the shared engine, routes, CSP and platform version unchanged.
->>>>>>> 3c06acf (feat: integrate G3Soft institutional site and landing pages)

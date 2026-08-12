@@ -1,8 +1,5 @@
 const path=require('path');
-<<<<<<< HEAD
-=======
 const fs=require('fs');
->>>>>>> 3c06acf (feat: integrate G3Soft institutional site and landing pages)
 const crypto=require('crypto');
 const express=require('express');
 const helmet=require('helmet');
@@ -41,8 +38,6 @@ app.get('/api/ready',async(req,res)=>{try{const r=await pool.query("SELECT to_re
 
 app.use('/api/auth',require('./routes/auth'));app.use('/api/campaigns',require('./routes/campaigns'));app.use('/api/phases',require('./routes/phases'));app.use('/api/tasks',require('./routes/tasks'));
 app.use('/api/work',require('./routes/work-management'));app.use('/api/calendar',require('./routes/calendar'));app.use('/api/calendar-events',require('./routes/calendar-events'));app.use('/api/dashboard',require('./routes/dashboard'));app.use('/api/audit',require('./routes/audit'));app.use('/api/approvals',require('./routes/approvals'));app.use('/api/workflows',require('./routes/workflows'));app.use('/api/content',require('./routes/content'));app.use('/api/analytics',require('./routes/analytics'));app.use('/api/notifications',require('./routes/notifications'));app.use('/api/automations',require('./routes/automations'));app.use('/api/diagnostics',require('./routes/diagnostics'));
-<<<<<<< HEAD
-=======
 app.get(/^\/g3soft\/?$/, (req,res)=>{
   res.sendFile(path.join(__dirname,'../public/g3soft/index.html'));
 });
@@ -62,7 +57,6 @@ app.get(/^\/(g3erp|g3control|g3food|g3pedidos|g3small|varejo|supermercados|resta
     .replace('<link rel="canonical" href="/g3erp">',`<link rel="canonical" href="${escapeHtml(canonical)}">`);
   res.type('html').send(html);
 });
->>>>>>> 3c06acf (feat: integrate G3Soft institutional site and landing pages)
 app.use(express.static(path.join(__dirname,'../public'),{extensions:['html'],maxAge:env.isProduction?'1h':0,fallthrough:true}));
 app.use((req,res,next)=>req.path.startsWith('/api/')?res.status(404).json({error:'NOT_FOUND',message:'Endpoint não encontrado.',requestId:req.id}):res.sendFile(path.join(__dirname,'../public/index.html')));
 app.use((err,req,res,next)=>{console.error(`[${new Date().toISOString()}] request=${req.id||'unknown'} error=${err.message}`);const status=Number(err.status)||500;res.status(status).json({error:status>=400&&status<500?'REQUEST_ERROR':'INTERNAL_ERROR',message:status<500?err.message:'Erro interno.',requestId:req.id});});

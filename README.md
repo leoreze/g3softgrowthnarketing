@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# G3Soft Growth OS — v1.0.20
-=======
 # G3Soft Growth OS — v1.0.22
 ## Landing Page Engine — v0.2.0
 
@@ -8,7 +5,6 @@ A partir da base estável v1.0.22, a Landing Page Engine fornece uma única estr
 
 A engine usa configuração centralizada em `public/landing/landing-data.js`, renderização compartilhada em `public/landing/landing-engine.js` e estilos em `public/landing/landing.css`. O tracking da primeira versão fica localmente preparado para posterior integração com CRM/analytics.
 
->>>>>>> 3c06acf (feat: integrate G3Soft institutional site and landing pages)
 
 Growth Command Center do G3Soft Growth OS: roadmap de 180 dias, Kanban, tarefas, microtarefas, evidências, checklist de aceite, prontidão para aprovação, governança, CRM/marketing, Content Planner com drag & drop, automações, auditoria e calendário inteligente Mês/Semana/Dia/Agenda.
 
@@ -267,9 +263,6 @@ npm run db:doctor
 ```
 
 `npm run db:migrate` is incremental and does not reset or delete existing data. The destructive `npm run db:reset` command remains prohibited in production.
-<<<<<<< HEAD
-=======
 
 ## Site institucional
 A nova experiência institucional está disponível em `GET /g3soft`, integrada ao mesmo projeto e ao mesmo servidor do Growth OS.
->>>>>>> 3c06acf (feat: integrate G3Soft institutional site and landing pages)
