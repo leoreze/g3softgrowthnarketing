@@ -266,3 +266,6 @@ npm run db:doctor
 
 ## Site institucional
 A nova experiência institucional está disponível em `GET /g3soft`, integrada ao mesmo projeto e ao mesmo servidor do Growth OS.
+
+## CRM Foundation v0.3.0
+A foundation CRM incremental está disponível em `/api/crm`, com Companies, Contacts, Leads, Lead Sources e Lead History.

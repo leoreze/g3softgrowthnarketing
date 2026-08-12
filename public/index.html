@@ -8,6 +8,7 @@
   <title>G3Soft Growth OS</title>
   <link rel="icon" href="/assets/g3soft-logo.png">
   <link rel="stylesheet" href="/css/app.css">
+  <link rel="stylesheet" href="/css/crm-premium.css">
 </head>
 <body>
 <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
@@ -61,13 +62,15 @@
   <aside class="sidebar" id="sidebar">
     <div class="brand-row"><img src="/assets/g3soft-logo-white.png" alt="G3Soft" class="logo logo-small logo-white"><button id="closeSidebar" class="icon-btn mobile-only">×</button></div>
     <div class="workspace"><span class="status-dot"></span><div><strong>Growth Marketing</strong><small>Workspace principal · 180 dias</small></div></div>
-    <nav class="nav"><button data-view="overview" class="nav-item active"><span>⌂</span>Visão geral</button><button data-view="phases" class="nav-item"><span>◈</span>Roadmap</button><button data-view="kanban" class="nav-item"><span>▦</span>Kanban</button><button data-view="tasks" class="nav-item"><span>✓</span>Tarefas</button><button data-view="calendar" class="nav-item"><span>□</span>Calendário</button><button data-view="approvals" class="nav-item"><span>◉</span>Aprovações<em id="approvalCount">0</em></button><button data-view="workflows" class="nav-item"><span>◇</span>Fluxos de trabalho</button><button data-view="campaigns" class="nav-item"><span>◉</span>Campanhas</button><button data-view="content" class="nav-item"><span>✦</span>Conteúdo</button><button data-view="analytics" class="nav-item"><span>◌</span>Análises</button><button data-view="automations" class="nav-item"><span>⚙</span>Automações</button><button data-view="diagnostic" class="nav-item"><span>◉</span>Diagnóstico 360</button></nav>
+    <nav class="nav"><button data-view="overview" class="nav-item active"><span>⌂</span>Visão geral</button><button data-view="phases" class="nav-item"><span>◈</span>Roadmap</button><button data-view="kanban" class="nav-item"><span>▦</span>Kanban</button><button data-view="crm" class="nav-item"><span>◎</span>CRM<em class="nav-badge">CRM</em></button><button data-view="tasks" class="nav-item"><span>✓</span>Tarefas</button><button data-view="calendar" class="nav-item"><span>□</span>Calendário</button><button data-view="approvals" class="nav-item"><span>◉</span>Aprovações<em id="approvalCount">0</em></button><button data-view="workflows" class="nav-item"><span>◇</span>Fluxos de trabalho</button><button data-view="campaigns" class="nav-item"><span>◉</span>Campanhas</button><button data-view="content" class="nav-item"><span>✦</span>Conteúdo</button><button data-view="analytics" class="nav-item"><span>◌</span>Análises</button><button data-view="automations" class="nav-item"><span>⚙</span>Automações</button><button data-view="diagnostic" class="nav-item"><span>◉</span>Diagnóstico 360</button></nav>
     <div class="sidebar-bottom"><div class="user-card"><div class="avatar" id="avatar">G</div><div><strong id="userName">Usuário</strong><small id="userRole">—</small></div></div><button id="logout" class="logout-btn">Sair</button></div>
   </aside>
   <main class="main"><header class="topbar"><button id="openSidebar" class="icon-btn mobile-only">☰</button><div class="top-title"><span>G3SOFT GROWTH MARKETING</span><h1 id="pageTitle">Visão geral</h1></div><div class="top-actions"><button class="icon-btn notification-trigger" id="notificationsBtn" title="Notificações" aria-label="Notificações">◔<em id="notificationCount">0</em></button><button class="icon-btn" id="refresh" title="Atualizar">↻</button><button class="btn btn-primary" id="newTask">+ Nova tarefa</button></div></header><div class="page" id="content"></div></main>
 </section>
 
 <dialog id="modal" class="modal"><div class="modal-head"><div><span class="eyebrow">G3SOFT GROWTH OS</span><h2 id="modalTitle">Tarefa</h2></div><button id="closeModal" class="icon-btn">×</button></div><form id="modalForm"></form></dialog><dialog id="notificationsModal" class="modal notifications-modal"><div class="modal-head"><div><span class="eyebrow">G3SOFT GROWTH OS</span><h2>Notificações</h2></div><div class="modal-head-actions"><button id="markNotificationsRead" class="btn btn-secondary btn-sm">Marcar todas como lidas</button><button id="closeNotifications" class="icon-btn">×</button></div></div><div id="notificationsList" class="notifications-list"></div></dialog>
+<dialog id="crmModal" class="crm-modal"><header class="crm-modal-header"><div><span class="crm-eyebrow"><b></b> G3SOFT CRM</span><h2 id="crmModalTitle">CRM</h2></div><button class="icon-btn" id="closeCrmModal" aria-label="Fechar modal">×</button></header><div id="crmModalBody" class="crm-modal-body"></div><footer id="crmModalFooter" class="crm-modal-footer" hidden></footer></dialog>
+<script src="/js/crm-premium.js" defer></script>
 <script src="/js/app.js" defer></script>
 </body>
 </html>
