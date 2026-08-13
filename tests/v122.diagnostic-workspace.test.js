@@ -25,7 +25,7 @@ test('v1.0.22 diagnostic frontend contains the central intelligence workspace',(
  assert.doesNotMatch(s,/style="width:/);
 });
 
-test('v1.0.22 package version is 1.0.22',()=>{
+test('v1.0.23 package version is 1.0.23',()=>{
  const pkg=JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8'));
- assert.equal(pkg.version,'1.0.22');
+ assert.equal(pkg.version,'1.0.28');
 });

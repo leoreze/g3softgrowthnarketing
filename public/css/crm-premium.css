@@ -367,3 +367,425 @@
   position: relative;
   z-index: 2;
 }
+/* Growth & Marketing — acquisition command center */
+.crm-growth{display:grid;gap:18px}.crm-growth-hero{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;padding:26px;border:1px solid var(--border,rgba(255,255,255,.08));border-radius:22px;background:linear-gradient(135deg,rgba(255,138,0,.10),rgba(255,255,255,.025));box-shadow:0 18px 50px rgba(0,0,0,.22)}.crm-growth-hero h3{margin:8px 0 6px;font-size:26px}.crm-growth-hero p{margin:0;max-width:700px;color:var(--muted,#9ba3b0);line-height:1.6}.crm-growth-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}.crm-growth-kpis{margin:0}.crm-growth-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.crm-source-list{display:grid;gap:10px;padding:18px}.crm-source-list>div{display:flex;justify-content:space-between;gap:16px;padding:12px 14px;border:1px solid var(--border,rgba(255,255,255,.07));border-radius:12px;background:rgba(255,255,255,.018)}.crm-source-list span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.crm-source-list b{color:var(--orange,#ff8a00)}.crm-marketing-error{padding:30px;border:1px solid rgba(255,80,80,.25);border-radius:16px;color:#ffb4b4}.crm-growth .crm-table td small{display:block;color:var(--muted,#9ba3b0);margin-top:4px}.crm-growth .crm-table td{vertical-align:middle}.crm-growth .crm-more{cursor:pointer}.crm-growth .crm-panel{overflow:hidden}
+@media(max-width:900px){.crm-growth-hero{flex-direction:column;align-items:flex-start}.crm-growth-actions{justify-content:flex-start}.crm-growth-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.crm-growth-hero{padding:20px}.crm-growth-actions,.crm-growth-actions .btn{width:100%}.crm-growth-actions .btn{justify-content:center}.crm-growth .crm-table-wrap{overflow-x:auto}}
+
+
+.crm-growth-grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(320px,.9fr);gap:18px;margin-top:18px}
+.crm-growth-card{background:var(--crm-panel,#101522);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:20px;box-shadow:0 16px 50px rgba(0,0,0,.12)}
+.crm-growth-card>header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+.crm-growth-card>header h3{margin:4px 0 0}
+.crm-strategy-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.crm-strategy-card{border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:16px;background:rgba(255,255,255,.025);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.crm-strategy-card:hover{transform:translateY(-2px);border-color:rgba(255,138,0,.35);box-shadow:0 12px 30px rgba(0,0,0,.14)}
+.crm-strategy-top{display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+.crm-priority{padding:4px 7px;border-radius:999px;font-weight:800}.crm-priority.p0{background:rgba(255,138,0,.16);color:#ffb15a}.crm-priority.p1{background:rgba(124,92,255,.16);color:#b9a8ff}
+.crm-strategy-card h4{font-size:18px;margin:12px 0 3px}.crm-strategy-icp{margin:0 0 12px;opacity:.65;font-size:12px}
+.crm-strategy-flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12px;margin-bottom:10px}.crm-strategy-flow strong{padding:5px 8px;border-radius:8px;background:rgba(255,138,0,.12);color:#ffb15a}
+.crm-strategy-card>p:not(.crm-strategy-icp){font-size:13px;line-height:1.55;min-height:40px}
+.crm-strategy-actions{display:flex;gap:8px;margin-top:14px}.btn-sm{padding:8px 11px!important;font-size:12px!important}
+.crm-lp-list{display:flex;flex-direction:column;gap:8px;max-height:560px;overflow:auto;padding-right:3px}.crm-lp-item{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px;border-radius:13px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06)}
+.crm-lp-item>div:first-child{min-width:0;display:flex;flex-direction:column;gap:3px}.crm-lp-item strong{font-size:13px}.crm-lp-item small{opacity:.55;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:260px}.crm-lp-type{font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.5}.crm-lp-actions{display:flex;align-items:center;gap:6px}.crm-lp-actions a{font-size:11px}.crm-strategy-preview{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}.crm-strategy-preview>div{padding:11px;border-radius:12px;background:rgba(255,255,255,.04);display:flex;flex-direction:column;gap:4px}.crm-strategy-preview .full{grid-column:1/-1}.crm-strategy-preview span{font-size:10px;text-transform:uppercase;letter-spacing:.08em;opacity:.55}.crm-strategy-preview strong{font-size:13px;line-height:1.4}
+@media(max-width:1050px){.crm-growth-grid{grid-template-columns:1fr}.crm-strategy-grid{grid-template-columns:1fr}}
+
+.crm-strategy-nav{display:flex;gap:7px;flex-wrap:wrap;margin:18px 0;padding:7px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.07);border-radius:15px}
+.crm-strategy-nav button{border:0;background:transparent;color:inherit;opacity:.65;padding:9px 12px;border-radius:10px;cursor:pointer;font-weight:700;font-size:12px}
+.crm-strategy-nav button.active{background:rgba(255,138,0,.14);color:#ffb15a;opacity:1}
+.crm-house-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.crm-house-grid article{padding:15px;border:1px solid rgba(255,255,255,.07);border-radius:15px;background:rgba(255,255,255,.025);display:flex;flex-direction:column;gap:7px}.crm-house-grid article.full{grid-column:1/-1}.crm-house-grid span,.crm-house-core>span,.crm-proof-type{font-size:10px;letter-spacing:.09em;text-transform:uppercase;opacity:.52}.crm-house-grid strong{font-size:14px;line-height:1.45}.crm-house-main{display:grid;grid-template-columns:1fr 1.6fr;gap:16px}.crm-house-core{padding:22px;border-radius:18px;background:linear-gradient(135deg,rgba(255,138,0,.12),rgba(255,255,255,.025));border:1px solid rgba(255,138,0,.2)}.crm-house-core h2{font-size:24px;line-height:1.2;margin:10px 0}.crm-house-core p{opacity:.7;line-height:1.6}.crm-pillars{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:16px}.crm-pillars>div{padding:13px;border-radius:14px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06)}.crm-pillars b{display:block;font-size:12px;margin-bottom:5px}.crm-pillars span{font-size:11px;opacity:.62;line-height:1.4}.crm-strategy-pipeline{display:flex;gap:5px;align-items:center;flex-wrap:wrap;line-height:1.8}.crm-strategy-pipeline span{padding:5px 8px;border-radius:8px;background:rgba(255,255,255,.05);font-size:10px}.crm-strategy-pipeline i{opacity:.35;font-style:normal}.crm-mini-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:18px}.crm-mini-stats div{text-align:center;padding:12px;border-radius:13px;background:rgba(255,255,255,.025)}.crm-mini-stats strong{display:block;font-size:20px}.crm-mini-stats span{font-size:10px;opacity:.55}.crm-entity-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.crm-entity-grid article{padding:14px;border-radius:14px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.025);position:relative}.crm-entity-grid h4{margin:0 0 5px}.crm-entity-grid p{font-size:12px;opacity:.65;line-height:1.45;min-height:34px}.crm-entity-grid small{font-size:9px;opacity:.45}.crm-status-dot{position:absolute;right:13px;top:14px;width:7px;height:7px;border-radius:50%;background:#777}.crm-status-dot.ok{background:#54d18b;box-shadow:0 0 10px rgba(84,209,139,.6)}.crm-chip-cloud{display:flex;flex-wrap:wrap;gap:8px}.crm-chip-cloud span{padding:8px 11px;border-radius:999px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.07);font-size:11px}.crm-chip-cloud span.product{border-color:rgba(255,138,0,.2);color:#ffb15a}.crm-matrix-list{display:flex;flex-direction:column;gap:10px}.crm-matrix-row{display:flex;justify-content:space-between;gap:18px;padding:16px;border-radius:16px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07)}.crm-matrix-main{min-width:0}.crm-matrix-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}.crm-matrix-tags span{font-size:9px;text-transform:uppercase;letter-spacing:.06em;padding:4px 7px;border-radius:7px;background:rgba(255,255,255,.05);opacity:.7}.crm-matrix-tags span.stage{background:rgba(255,138,0,.12);color:#ffb15a;opacity:1}.crm-matrix-row h4{font-size:15px;margin:0 0 7px}.crm-matrix-row p{font-size:12px;opacity:.65;line-height:1.5;margin:0}.crm-matrix-meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:9px;font-size:10px;opacity:.5}.crm-matrix-row .crm-strategy-actions{flex-shrink:0;align-self:center;display:flex;flex-direction:column}.crm-proof-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.crm-proof-grid article{padding:16px;border-radius:15px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07)}.crm-proof-grid article>div{display:flex;justify-content:space-between;gap:8px}.crm-proof-status{font-size:9px;color:#ffb15a}.crm-proof-grid h4{margin:10px 0 6px}.crm-proof-grid p{font-size:12px;opacity:.62;line-height:1.5}.crm-marketing-error{padding:30px;border:1px solid rgba(255,80,80,.25);border-radius:16px;background:rgba(255,80,80,.05)}
+@media(max-width:1000px){.crm-house-main{grid-template-columns:1fr}.crm-pillars{grid-template-columns:repeat(2,1fr)}.crm-proof-grid{grid-template-columns:1fr 1fr}.crm-matrix-row{flex-direction:column}.crm-matrix-row .crm-strategy-actions{flex-direction:row;align-self:flex-start}}
+@media(max-width:640px){.crm-house-grid,.crm-entity-grid{grid-template-columns:1fr}.crm-pillars,.crm-proof-grid,.crm-mini-stats{grid-template-columns:1fr 1fr}.crm-strategy-nav{overflow:auto;flex-wrap:nowrap}.crm-strategy-nav button{white-space:nowrap}}
+
+.crm-growth-links{margin-top:18px}
+
+.crm-subheader{margin-top:24px}
+/* v1.0.26 — Growth Calendar + Relationship Center */
+.crm-calendar-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.crm-calendar-week{padding:16px;border:1px solid rgba(255,255,255,.07);border-radius:16px;background:rgba(255,255,255,.025)}.crm-calendar-top{display:flex;justify-content:space-between;gap:10px;font-size:10px;text-transform:uppercase;letter-spacing:.08em;opacity:.65}.crm-calendar-week h4{margin:11px 0 8px;font-size:16px}.crm-calendar-week p{font-size:12px;line-height:1.5;opacity:.78}.crm-calendar-tags{display:flex;flex-wrap:wrap;gap:5px;margin:9px 0}.crm-calendar-tags span,.crm-channel-kpis span{padding:4px 7px;border-radius:999px;background:rgba(255,255,255,.06);font-size:9px;letter-spacing:.04em}.crm-calendar-bottom{display:flex;justify-content:space-between;gap:8px;padding-top:10px;border-top:1px solid rgba(255,255,255,.06);font-size:11px}.crm-calendar-bottom strong{color:#ffad55}.crm-calendar-legend{display:flex;gap:14px;flex-wrap:wrap;margin-top:15px;font-size:11px;opacity:.7}.crm-calendar-legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}.crm-calendar-legend .organic{background:#58c7a5}.crm-calendar-legend .paid{background:#ff9d4d}.crm-calendar-legend .owned{background:#7f7cff}.crm-calendar-legend .relationship{background:#f0648d}
+.crm-channel-card{min-height:240px}.crm-channel-type{font-size:9px;padding:5px 8px;border-radius:999px}.crm-channel-type.organic{background:rgba(88,199,165,.12);color:#78e1c0}.crm-channel-type.paid{background:rgba(255,157,77,.12);color:#ffb36d}.crm-channel-type.owned{background:rgba(127,124,255,.12);color:#aaa8ff}.crm-channel-type.relationship{background:rgba(240,100,141,.12);color:#ff8bab}.crm-channel-meta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:14px 0}.crm-channel-meta div{padding:10px;border-radius:12px;background:rgba(255,255,255,.035)}.crm-channel-meta small,.crm-channel-kpis small{display:block;opacity:.5;font-size:9px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}.crm-channel-meta strong{font-size:11px;line-height:1.35}.crm-channel-kpis{margin-top:14px;display:flex;flex-wrap:wrap;gap:5px}
+.crm-campaign-blueprints{display:grid;gap:10px}.crm-campaign-blueprints article{display:grid;grid-template-columns:50px minmax(0,1fr) auto;gap:14px;align-items:center;padding:15px;border:1px solid rgba(255,255,255,.07);border-radius:16px;background:rgba(255,255,255,.025)}.crm-campaign-month{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:rgba(255,138,0,.12);color:#ffad55;font-weight:800}.crm-campaign-main h4{margin:3px 0 5px;font-size:15px}.crm-campaign-main p{font-size:12px;opacity:.7;margin:0 0 7px}.crm-campaign-main .crm-panel-kicker{font-size:9px}
+.crm-relationship-modules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.crm-relationship-modules article{padding:14px;border-radius:15px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06)}.crm-rel-number{font-size:10px;opacity:.45}.crm-relationship-modules h4{margin:7px 0 5px;font-size:14px}.crm-relationship-modules p{font-size:11px;line-height:1.45;opacity:.68;margin:0}.crm-playbook-list{display:flex;flex-direction:column;gap:9px}.crm-playbook-list article{padding:13px;border:1px solid rgba(255,255,255,.06);border-radius:14px}.crm-playbook-list article>div:first-child{display:flex;flex-direction:column;gap:3px}.crm-playbook-list article span{font-size:9px;text-transform:uppercase;letter-spacing:.08em;opacity:.5}.crm-playbook-list article strong{font-size:13px}.crm-playbook-list article small{opacity:.55;font-size:10px}.crm-playbook-steps{display:flex;flex-direction:column;gap:4px;margin-top:9px}.crm-playbook-steps em{font-size:10px;font-style:normal;padding:5px 7px;background:rgba(255,255,255,.035);border-radius:8px}
+@media(max-width:900px){.crm-calendar-grid,.crm-relationship-modules{grid-template-columns:1fr}.crm-campaign-blueprints article{grid-template-columns:40px 1fr}.crm-campaign-blueprints article .btn{grid-column:2;justify-self:start}.crm-channel-meta{grid-template-columns:1fr}}
+
+
+/* v1.0.28 — Growth workspace follows the same CRM visual system */
+.crm-page .crm-growth{color:var(--crm-ink);background:transparent}
+.crm-growth .crm-growth-card,
+.crm-growth .crm-growth-links,
+.crm-growth .crm-strategy-foundation,
+.crm-growth .crm-channel-card,
+.crm-growth .crm-content-engine-hero,
+.crm-growth .crm-rel-hero{background:#fff;color:var(--crm-ink);border:1px solid var(--crm-line);box-shadow:0 8px 30px rgba(16,17,21,.035)}
+.crm-growth .crm-growth-card p,
+.crm-growth .crm-growth-card .crm-muted{color:var(--crm-muted)}
+.crm-growth .crm-growth-card>header{border-bottom:1px solid #f0f0ef;padding-bottom:14px}
+.crm-growth .crm-panel-kicker{color:#9699a1}
+.crm-growth .crm-strategy-nav{background:#f0f0ee;border:1px solid #e7e7e4;padding:4px;border-radius:12px;display:flex;gap:4px;overflow:auto}
+.crm-growth .crm-strategy-nav button{border:0;background:transparent;color:#777;padding:9px 12px;border-radius:8px;font:800 10px inherit;white-space:nowrap;cursor:pointer}
+.crm-growth .crm-strategy-nav button.active{background:#fff;color:#111;box-shadow:0 3px 12px rgba(0,0,0,.06)}
+.crm-growth .crm-growth-links .crm-table th{background:#fafaf9}
+.crm-growth .crm-entity-grid article,
+.crm-growth .crm-proof-grid article,
+.crm-growth .crm-lp-item,
+.crm-growth .crm-matrix-row,
+.crm-growth .crm-campaign-blueprints article,
+.crm-growth .crm-channel-card,
+.crm-growth .crm-calendar-week{background:#fff;border-color:var(--crm-line);box-shadow:none}
+.crm-growth .crm-chip-cloud span,
+.crm-growth .crm-calendar-tags span{background:#f4f4f2;color:#666;border:1px solid #e8e8e5}
+.crm-growth .crm-calendar-legend{color:#777}
+
+/* Content Engine */
+.crm-content-engine{display:grid;gap:14px}
+.crm-content-engine-hero{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px 26px!important}
+.crm-content-engine-hero-copy{max-width:820px}
+.crm-content-engine-hero h3{margin:7px 0 6px;font-size:24px;letter-spacing:-.04em}
+.crm-content-engine-hero p{margin:0;line-height:1.6;color:#777}
+.crm-content-engine-score{min-width:130px;text-align:right;display:flex;flex-direction:column}
+.crm-content-engine-score strong{font-size:38px;letter-spacing:-.06em}
+.crm-content-engine-score span{font-size:9px;color:#999;text-transform:uppercase;letter-spacing:.1em}
+.crm-content-engine-toolbar{display:flex;align-items:end;gap:10px;padding:12px;background:#fff;border:1px solid var(--crm-line);border-radius:16px;box-shadow:0 8px 30px rgba(16,17,21,.03)}
+.crm-content-filter{display:flex;flex-direction:column;gap:5px;min-width:150px}
+.crm-content-filter span{font-size:9px;color:#999;text-transform:uppercase;letter-spacing:.1em;font-weight:800}
+.crm-content-filter select{height:38px;border:1px solid #dddeda;border-radius:10px;background:#fafaf8;padding:0 10px;font:700 11px inherit;color:#333}
+.crm-content-summary{margin-left:auto;display:flex;align-items:center;gap:7px;color:#999;font-size:9px}
+.crm-content-summary b{font-size:16px;color:#222;margin-left:8px}
+.crm-content-board{display:grid;gap:14px}
+.crm-content-week{background:#fff;border:1px solid var(--crm-line);border-radius:18px;padding:16px;box-shadow:0 8px 30px rgba(16,17,21,.03)}
+.crm-content-week>header{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid #f0f0ef}
+.crm-content-week>header h4{margin:4px 0;font-size:15px}
+.crm-content-week>header p{margin:0;color:#999;font-size:10px}
+.crm-content-assets{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.crm-content-asset{display:flex;flex-direction:column;min-height:270px;border:1px solid #e8e8e5;border-radius:14px;background:#fff;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
+.crm-content-asset:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(16,17,21,.07);border-color:#deded9}
+.crm-content-asset[hidden],.crm-content-week[hidden]{display:none}
+.crm-content-asset-top{display:flex;align-items:center;gap:6px;padding:11px 12px;background:#fafaf8;border-bottom:1px solid #eeeeeb}
+.crm-channel-badge,.crm-content-format,.crm-status-chip{font-size:8px;font-weight:900;letter-spacing:.07em;text-transform:uppercase;padding:5px 7px;border-radius:6px}
+.crm-channel-badge{background:#f1f1ef;color:#555}
+.crm-channel-badge.paid{background:#fff0e7;color:#d96322}.crm-channel-badge.organic{background:#eaf8f1;color:#25835b}.crm-channel-badge.relationship{background:#f0edff;color:#6c55c8}.crm-channel-badge.owned{background:#eaf2ff;color:#4b75bd}
+.crm-content-format{color:#999;background:#fff;border:1px solid #e9e9e6}
+.crm-status-chip{margin-left:auto;background:#f1f1f0;color:#777}.crm-status-chip.active{background:#eaf8f1;color:#25835b}
+.crm-content-asset-main{padding:13px 13px 8px;flex:1}
+.crm-content-asset-main h5{font-size:13px;margin:5px 0 8px;line-height:1.25}
+.crm-content-asset-main p{font-size:10px;line-height:1.5;color:#777;margin:7px 0}
+.crm-content-hook{font-weight:800;color:#2d2e33!important}
+.crm-content-asset-footer{display:flex;flex-wrap:wrap;gap:7px;padding:10px 13px;border-top:1px solid #f0f0ef;color:#999;font-size:8px}
+.crm-content-asset-footer span{background:#f7f7f5;border-radius:6px;padding:5px 7px}
+.crm-content-asset-footer b{color:#555}
+.crm-content-asset-footer a{color:#df641f;text-decoration:none;font-weight:900;padding:5px 7px}
+.crm-content-actions{display:flex;justify-content:flex-end;gap:6px;padding:9px 13px;border-top:1px solid #f0f0ef}
+
+/* Relationship Center */
+.crm-relationship-center{display:grid;gap:14px}
+.crm-rel-hero{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:24px 26px!important}
+.crm-rel-hero h3{margin:7px 0;font-size:25px;letter-spacing:-.04em}
+.crm-rel-hero p{margin:0;max-width:720px;color:#777;line-height:1.55}
+.crm-rel-live{display:flex;align-items:center;gap:7px;color:#25835b;font-size:9px;font-weight:900;text-transform:uppercase;white-space:nowrap}
+.crm-rel-live span{width:7px;height:7px;border-radius:50%;background:#2f9d70;box-shadow:0 0 12px rgba(47,157,112,.5)}
+.crm-rel-kpis{display:grid;grid-template-columns:repeat(7,1fr);gap:9px}
+.crm-rel-kpis article{background:#fff;border:1px solid var(--crm-line);border-radius:14px;padding:13px;box-shadow:0 8px 25px rgba(16,17,21,.03)}
+.crm-rel-kpis article span{display:block;font-size:8px;color:#999;text-transform:uppercase;letter-spacing:.09em;font-weight:800}
+.crm-rel-kpis article strong{display:block;font-size:24px;letter-spacing:-.05em;margin-top:5px}
+.crm-rel-kpi-orange strong{color:#df641f}.crm-rel-kpi-violet strong{color:#6c55c8}.crm-rel-kpi-blue strong{color:#4b75bd}.crm-rel-kpi-green strong{color:#25835b}.crm-rel-kpi-hot strong{color:#dc4c40}.crm-rel-kpi-red strong{color:#cf4b4b}.crm-rel-kpi-gold strong{color:#b77a16}
+.crm-rel-modules{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.crm-rel-modules article{display:grid;grid-template-columns:42px 1fr;gap:11px;padding:14px;border:1px solid #e8e8e5;border-radius:14px;background:#fff}
+.crm-rel-module-icon{width:42px;height:42px;border-radius:12px;background:#fff0e7;color:#df641f;display:grid;place-items:center;font-size:10px;font-weight:900}
+.crm-rel-modules h4{margin:4px 0 4px;font-size:13px}
+.crm-rel-modules p{margin:0;font-size:9px;line-height:1.45;color:#888}
+.crm-playbook-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.crm-playbook-card{padding:16px;border:1px solid #e8e8e5;border-radius:15px;background:#fff}
+.crm-playbook-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.crm-playbook-module{font-size:8px;color:#df641f;font-weight:900;text-transform:uppercase;letter-spacing:.1em}
+.crm-playbook-card h4{margin:8px 0 4px;font-size:14px}
+.crm-playbook-trigger{margin:0 0 9px!important;color:#999!important;font-size:9px!important;font-weight:800}
+.crm-playbook-objective{font-size:10px;line-height:1.45;color:#666;background:#fafaf8;border-radius:9px;padding:9px;margin-bottom:10px}
+.crm-playbook-card ol{margin:0 0 12px;padding-left:20px;color:#555;font-size:10px;line-height:1.7}
+.crm-playbook-foot{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #f0f0ef;padding-top:10px;color:#999;font-size:8px}
+
+@media(max-width:1100px){.crm-rel-kpis{grid-template-columns:repeat(4,1fr)}.crm-rel-modules{grid-template-columns:repeat(2,1fr)}.crm-content-assets{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.crm-content-engine-hero,.crm-rel-hero{flex-direction:column;align-items:flex-start}.crm-content-engine-score{text-align:left}.crm-content-engine-toolbar{flex-wrap:wrap}.crm-content-filter{flex:1;min-width:120px}.crm-content-summary{width:100%;margin-left:0;justify-content:flex-start}.crm-content-assets,.crm-playbook-grid,.crm-rel-modules{grid-template-columns:1fr}.crm-rel-kpis{grid-template-columns:repeat(2,1fr)}}
+
+/* v1.0.28 HOTFIX — Growth & Marketing must inherit the CRM dark design system.
+   This block intentionally overrides the earlier light-theme compatibility layer. */
+.crm-growth,
+.crm-growth *{box-sizing:border-box}
+
+.crm-growth{
+  color:#F5F5F5!important;
+  --growth-bg:#08090B;
+  --growth-surface:#101216;
+  --growth-surface-2:#14171C;
+  --growth-surface-3:#191C22;
+  --growth-border:#272B32;
+  --growth-text:#F5F5F5;
+  --growth-muted:#A4A7AE;
+  --growth-dim:#70747D;
+  --growth-orange:#FF8A00;
+  --growth-orange-soft:rgba(255,138,0,.13);
+  background:transparent!important;
+}
+
+/* Header / internal navigation */
+.crm-growth .crm-strategy-nav{
+  background:#0D0F13!important;
+  border:1px solid #292D34!important;
+  box-shadow:0 10px 30px rgba(0,0,0,.22)!important;
+  padding:6px!important;
+  border-radius:14px!important;
+}
+.crm-growth .crm-strategy-nav button{
+  background:transparent!important;
+  color:#969BA5!important;
+  opacity:1!important;
+  border:1px solid transparent!important;
+  transition:all .18s ease;
+}
+.crm-growth .crm-strategy-nav button:hover{
+  color:#F5F5F5!important;
+  background:#171A20!important;
+  border-color:#2C3037!important;
+}
+.crm-growth .crm-strategy-nav button.active{
+  background:linear-gradient(180deg,rgba(255,138,0,.18),rgba(255,138,0,.09))!important;
+  color:#FFAA45!important;
+  border-color:rgba(255,138,0,.28)!important;
+  box-shadow:0 5px 18px rgba(255,138,0,.08)!important;
+}
+
+/* Every Growth card / panel */
+.crm-growth .crm-growth-card,
+.crm-growth .crm-growth-links,
+.crm-growth .crm-strategy-foundation,
+.crm-growth .crm-channel-card,
+.crm-growth .crm-content-engine-hero,
+.crm-growth .crm-rel-hero,
+.crm-growth .crm-content-engine-toolbar,
+.crm-growth .crm-content-week,
+.crm-growth .crm-content-asset,
+.crm-growth .crm-rel-kpis article,
+.crm-growth .crm-playbook-card,
+.crm-growth .crm-rel-modules article,
+.crm-growth .crm-house-grid article,
+.crm-growth .crm-entity-grid article,
+.crm-growth .crm-proof-grid article,
+.crm-growth .crm-lp-item,
+.crm-growth .crm-matrix-row,
+.crm-growth .crm-campaign-blueprints article,
+.crm-growth .crm-calendar-week{
+  background:#101216!important;
+  color:#F5F5F5!important;
+  border-color:#272B32!important;
+  box-shadow:0 12px 35px rgba(0,0,0,.16)!important;
+}
+
+/* Elevated nested surfaces */
+.crm-growth .crm-house-core,
+.crm-growth .crm-pillars>div,
+.crm-growth .crm-chip-cloud span,
+.crm-growth .crm-calendar-tags span,
+.crm-growth .crm-calendar-bottom,
+.crm-growth .crm-channel-meta div,
+.crm-growth .crm-content-asset-top,
+.crm-growth .crm-content-asset-footer span,
+.crm-growth .crm-content-format,
+.crm-growth .crm-playbook-objective,
+.crm-growth .crm-strategy-preview>div{
+  background:#171A20!important;
+  color:#D9DCE2!important;
+  border-color:#292D34!important;
+}
+
+/* Typography contrast */
+.crm-growth h1,
+.crm-growth h2,
+.crm-growth h3,
+.crm-growth h4,
+.crm-growth h5,
+.crm-growth strong,
+.crm-growth b{
+  color:#F5F5F5!important;
+}
+.crm-growth p{color:#A4A7AE!important}
+.crm-growth small,
+.crm-growth .crm-panel-kicker,
+.crm-growth .crm-strategy-icp,
+.crm-growth .crm-muted{
+  color:#858A94!important;
+  opacity:1!important;
+}
+.crm-growth .crm-panel-kicker{
+  letter-spacing:.12em!important;
+  font-weight:800!important;
+}
+.crm-growth a{color:#FF9A2F!important}
+
+/* Header dividers */
+.crm-growth .crm-growth-card>header,
+.crm-growth .crm-content-week>header,
+.crm-growth .crm-content-asset-footer,
+.crm-growth .crm-content-actions,
+.crm-growth .crm-playbook-foot{
+  border-color:#292D34!important;
+}
+
+/* Tables */
+.crm-growth .crm-table{
+  color:#EDEFF2!important;
+}
+.crm-growth .crm-table thead th{
+  background:#0D0F13!important;
+  color:#858A94!important;
+  border-color:#272B32!important;
+}
+.crm-growth .crm-table tbody td{
+  background:#101216!important;
+  color:#DDE0E5!important;
+  border-color:#22262D!important;
+}
+.crm-growth .crm-table tbody tr:hover td{
+  background:#171A20!important;
+}
+
+/* Inputs / selects / controls */
+.crm-growth input,
+.crm-growth select,
+.crm-growth textarea{
+  background:#0D0F13!important;
+  color:#F5F5F5!important;
+  border:1px solid #30343B!important;
+}
+.crm-growth input::placeholder,
+.crm-growth textarea::placeholder{
+  color:#686D77!important;
+}
+.crm-growth input:focus,
+.crm-growth select:focus,
+.crm-growth textarea:focus{
+  border-color:rgba(255,138,0,.65)!important;
+  box-shadow:0 0 0 3px rgba(255,138,0,.09)!important;
+  outline:none!important;
+}
+
+/* Buttons */
+.crm-growth .btn-secondary{
+  background:#171A20!important;
+  color:#E8EAED!important;
+  border:1px solid #30343B!important;
+}
+.crm-growth .btn-secondary:hover{
+  background:#20242A!important;
+  border-color:#424750!important;
+}
+.crm-growth .btn-primary{
+  background:linear-gradient(135deg,#FF8A00,#FF9E2F)!important;
+  color:#111!important;
+  border-color:#FF8A00!important;
+  box-shadow:0 8px 24px rgba(255,138,0,.18)!important;
+}
+.crm-growth .btn-primary:hover{
+  filter:brightness(1.06);
+  transform:translateY(-1px);
+}
+
+/* KPI cards inside Growth */
+.crm-growth .crm-growth-kpis article{
+  background:#101216!important;
+  border:1px solid #272B32!important;
+  color:#F5F5F5!important;
+}
+.crm-growth .crm-growth-kpis article strong{color:#F5F5F5!important}
+.crm-growth .crm-growth-kpis article span{color:#8D929B!important}
+.crm-growth .crm-growth-kpis article small{color:#6F747D!important}
+
+/* Content Engine */
+.crm-growth .crm-content-engine-hero{
+  background:
+    radial-gradient(circle at 85% 15%,rgba(255,138,0,.13),transparent 32%),
+    linear-gradient(135deg,#101216,#0D0F13)!important;
+}
+.crm-growth .crm-content-engine-score strong{color:#FF9A2F!important}
+.crm-growth .crm-content-engine-score span{color:#858A94!important}
+.crm-growth .crm-content-filter span,
+.crm-growth .crm-content-summary,
+.crm-growth .crm-content-week>header p{
+  color:#858A94!important;
+}
+.crm-growth .crm-content-filter select{
+  background:#0D0F13!important;
+  color:#EDEFF2!important;
+  border-color:#30343B!important;
+}
+.crm-growth .crm-content-asset:hover{
+  border-color:rgba(255,138,0,.38)!important;
+  box-shadow:0 16px 40px rgba(0,0,0,.28)!important;
+}
+.crm-growth .crm-channel-badge{
+  background:#20242A!important;
+  color:#C8CBD1!important;
+}
+.crm-growth .crm-channel-badge.paid{background:rgba(255,138,0,.13)!important;color:#FFAD55!important}
+.crm-growth .crm-channel-badge.organic{background:rgba(54,201,143,.12)!important;color:#63D8A9!important}
+.crm-growth .crm-channel-badge.relationship{background:rgba(124,92,255,.13)!important;color:#B7A6FF!important}
+.crm-growth .crm-channel-badge.owned{background:rgba(75,117,189,.13)!important;color:#8EAEDE!important}
+.crm-growth .crm-content-format{
+  background:#171A20!important;
+  color:#858A94!important;
+}
+.crm-growth .crm-status-chip{
+  background:#20242A!important;
+  color:#A4A7AE!important;
+}
+.crm-growth .crm-status-chip.active{
+  background:rgba(54,201,143,.13)!important;
+  color:#63D8A9!important;
+}
+.crm-growth .crm-content-asset-main p{color:#9FA4AD!important}
+.crm-growth .crm-content-hook{color:#F0F2F4!important}
+.crm-growth .crm-content-asset-footer{color:#7F848E!important}
+.crm-growth .crm-content-asset-footer span{background:#171A20!important}
+.crm-growth .crm-content-asset-footer b{color:#D8DBE0!important}
+
+/* Relationship Center */
+.crm-growth .crm-rel-hero{
+  background:
+    radial-gradient(circle at 88% 12%,rgba(255,138,0,.14),transparent 28%),
+    linear-gradient(135deg,#101216,#0D0F13)!important;
+}
+.crm-growth .crm-rel-live{color:#63D8A9!important}
+.crm-growth .crm-rel-module-icon{
+  background:rgba(255,138,0,.12)!important;
+  color:#FFAA45!important;
+  border:1px solid rgba(255,138,0,.16);
+}
+.crm-growth .crm-rel-modules article p{color:#9297A0!important}
+.crm-growth .crm-playbook-module{color:#FF9A2F!important}
+.crm-growth .crm-playbook-trigger{color:#858A94!important}
+.crm-growth .crm-playbook-objective{background:#171A20!important;color:#AEB2B9!important}
+.crm-growth .crm-playbook-card ol{color:#B7BBC2!important}
+.crm-growth .crm-playbook-foot{color:#777C85!important}
+
+/* Status / accent */
+.crm-growth .crm-live i,
+.crm-growth .crm-status-dot.ok{box-shadow:0 0 12px rgba(54,201,143,.45)!important}
+.crm-growth .crm-status-dot.ok{background:#36C98F!important}
+.crm-growth .crm-priority.p0{background:rgba(255,138,0,.14)!important;color:#FFB15A!important}
+.crm-growth .crm-priority.p1{background:rgba(124,92,255,.14)!important;color:#B9A8FF!important}
+
+/* Remove any accidental light-theme leftovers in the Growth workspace */
+.crm-growth [style*="background:#fff"],
+.crm-growth [style*="background: #fff"],
+.crm-growth [style*="background:white"],
+.crm-growth [style*="color:#111"],
+.crm-growth [style*="color: #111"]{
+  background:#101216!important;
+  color:#F5F5F5!important;
+}
+
+@media(max-width:760px){
+  .crm-growth .crm-strategy-nav{
+    flex-wrap:nowrap!important;
+    overflow-x:auto!important;
+    scrollbar-width:thin;
+  }
+  .crm-growth .crm-strategy-nav button{white-space:nowrap!important}
+}

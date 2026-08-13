@@ -1,0 +1,10 @@
+const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');
+const root=path.join(__dirname,'..');
+const migration=fs.readFileSync(path.join(root,'src/db/migrations/024_growth_calendar_relationship.sql'),'utf8');
+const js=fs.readFileSync(path.join(root,'public/js/crm-premium.js'),'utf8');
+const css=fs.readFileSync(path.join(root,'public/css/crm-premium.css'),'utf8');
+const route=fs.readFileSync(path.join(root,'src/routes/marketing.js'),'utf8');
+test('v1.0.26 growth calendar migration exists and is non destructive',()=>{assert.match(migration,/growth_channel_plans/);assert.match(migration,/growth_campaign_blueprints/);assert.match(migration,/growth_calendar_items/);assert.match(migration,/relationship_playbooks/);assert.doesNotMatch(migration,/DROP TABLE|TRUNCATE|DROP DATABASE/i);});
+test('v1.0.26 CRM exposes calendar, traffic, campaigns and relationship sections',()=>{for(const x of ['calendar','channels','campaigns','relationship'])assert.match(js,new RegExp(`data-strategy-section="${x}"`));assert.match(js,/growth-calendar/);assert.match(js,/growthCalendarView/);assert.match(js,/growthRelationshipView/);});
+test('v1.0.26 API creates campaigns from calendar blueprints',()=>{assert.match(route,/growth-calendar/);assert.match(route,/growth_campaign_blueprints/);assert.match(route,/CREATE_FROM_CALENDAR_BLUEPRINT/);});
+test('v1.0.26 premium CSS covers calendar and relationship center',()=>{for(const x of ['crm-calendar-grid','crm-campaign-blueprints','crm-relationship-modules','crm-playbook-list'])assert.match(css,new RegExp(x));});

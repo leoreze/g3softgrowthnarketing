@@ -27,7 +27,7 @@ test('v1.0.21 action menu click closes and removes host layering state',()=>{
   assert.match(app,/card\.classList\.remove\('action-menu-host-open'\)/);
 });
 
-test('v1.0.22 version is 1.0.22',()=>assert.equal(JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version,'1.0.22'));
+test('v1.0.25 version is 1.0.25',()=>assert.equal(JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version,'1.0.28'));
 
 test('v1.0.21 frontend still contains no inline style attributes',()=>{
   assert.doesNotMatch(app,/style\s*=/i);

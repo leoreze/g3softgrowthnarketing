@@ -19,3 +19,15 @@ services:
         sync: false
       - key: CORS_ORIGIN
         sync: false
+      - key: G3_PUBLIC_URL
+        value: https://g3soft.com.br
+      - key: ATTRIBUTION_HASH_SALT
+        sync: false
+      - key: WHATSAPP_SALES_NUMBER
+        value: '5516992249258'
+      - key: WHATSAPP_CLOUD_TOKEN
+        sync: false
+      - key: WHATSAPP_PHONE_NUMBER_ID
+        sync: false
+      - key: WHATSAPP_API_VERSION
+        value: v23.0

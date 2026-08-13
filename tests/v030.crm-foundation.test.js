@@ -49,7 +49,7 @@ test('v0.3.0 CRM and base project contain no unresolved merge markers',()=>{
  ]) assert.doesNotMatch(fs.readFileSync(path.join(root,file),'utf8'),conflict,`${file} contains a conflict marker`);
 });
 
-test('v0.3.0 package baseline remains 1.0.22',()=>{
+test('v0.3.0 package baseline remains 1.0.23',()=>{
  const pkg=JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8'));
- assert.equal(pkg.version,'1.0.22');
+ assert.equal(pkg.version,'1.0.28');
 });

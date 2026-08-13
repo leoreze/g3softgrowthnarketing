@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>G3Soft | Tecnologia ao seu alcance</title>
@@ -12,7 +15,6 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://g3soft.com.br/">
   <meta name="theme-color" content="#080808">
-  <link rel="icon" href="/g3soft/assets/g3soft-logo.png">
   <link rel="stylesheet" href="/g3soft/css/styles.css">
 </head>
 <body>
@@ -26,20 +28,37 @@
       <img src="/g3soft/assets/g3soft-logo.png" alt="G3Soft">
     </a>
     <nav class="nav" aria-label="Navegação principal">
-      <a href="#solucoes">Soluções</a>
+      <details class="nav-dropdown">
+        <summary>Soluções <span>⌄</span></summary>
+        <div class="nav-menu">
+          <a href="/g3erp"><strong>G3ERP</strong><small>Gestão empresarial</small></a>
+          <a href="/g3control"><strong>G3Control</strong><small>Inteligência e indicadores</small></a>
+          <a href="/g3food"><strong>G3Food</strong><small>Food service</small></a>
+          <a href="/g3pedidos"><strong>G3Pedidos</strong><small>Pedidos e atendimento</small></a>
+          <a href="/g3small"><strong>G3Small</strong><small>Pequenos negócios</small></a>
+        </div>
+      </details>
+      <details class="nav-dropdown">
+        <summary>Segmentos <span>⌄</span></summary>
+        <div class="nav-menu nav-menu-segments">
+          <a href="/segmentos/loja-de-roupas"><strong>Loja de roupas</strong></a>
+          <a href="/segmentos/loja-de-conveniencias"><strong>Loja de conveniências</strong></a>
+          <a href="/segmentos/deposito-de-bebidas"><strong>Depósito de bebidas</strong></a>
+          <a href="/segmentos/bares-e-restaurantes"><strong>Bares e restaurantes</strong></a>
+          <a href="/segmentos/padarias"><strong>Padarias</strong></a>
+          <a href="/segmentos/lanchonetes-e-docerias"><strong>Lanchonetes e docerias</strong></a>
+          <a href="/segmentos/mercearias-e-mercados"><strong>Mercearias e mercados</strong></a>
+          <a href="/varejo"><strong>Varejo</strong></a>
+          <a href="/supermercados"><strong>Supermercados</strong></a>
+          <a href="/restaurantes"><strong>Restaurantes</strong></a>
+          <a href="/lojas"><strong>Lojas</strong></a>
+          <a href="/conveniencias"><strong>Conveniências</strong></a>
+          <a href="/multilojas"><strong>Multilojas</strong></a>
+        </div>
+      </details>
       <a href="#funcionalidades">Funcionalidades</a>
-      <a href="#segmentos">Segmentos</a>
       <a href="#contato">Contato</a>
     </nav>
-    <div class="nav-products" aria-label="Links rápidos para soluções">
-      <a href="/g3control">G3Control</a>
-      <a href="/g3erp">G3ERP</a>
-      <a href="/g3food">G3Food</a>
-      <a href="/g3pedidos">G3Pedidos</a>
-      <a href="/g3small">G3Small</a>
-      <a href="/descubra-seu-g3">Descubra seu G3</a>
-      <a href="/calculadora-de-perdas">Calculadora</a>
-    </div>
     <a class="button button-small" href="#contato">Quero conhecer</a>
     <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
   </header>
@@ -221,10 +240,19 @@
           <p>A G3Soft adapta suas soluções às necessidades de diferentes operações e segmentos.</p>
         </div>
         <div class="segment-list reveal">
-          <div><span>01</span><a class="segment-link" href="/varejo"><strong>Varejo</strong></a><small>Venda · estoque · financeiro</small><b>↗</b></div>
-          <div><span>02</span><a class="segment-link" href="/restaurantes"><strong>Food Service</strong></a><small>Atendimento · produção · entrega</small><b>↗</b></div>
-          <div><span>03</span><a class="segment-link" href="/g3small"><strong>Pequenos negócios</strong></a><small>Gestão comercial · PDV · financeiro</small><b>↗</b></div>
-          <div><span>04</span><a class="segment-link" href="/multilojas"><strong>Operações multilojas</strong></a><small>Integração · visão · controle</small><b>↗</b></div>
+          <div><span>01</span><a class="segment-link" href="/segmentos/loja-de-roupas"><strong>Loja de roupas</strong></a><small>Vendas · estoque · clientes</small><b>↗</b></div>
+          <div><span>02</span><a class="segment-link" href="/segmentos/loja-de-conveniencias"><strong>Loja de conveniências</strong></a><small>PDV · estoque · caixa</small><b>↗</b></div>
+          <div><span>03</span><a class="segment-link" href="/segmentos/deposito-de-bebidas"><strong>Depósito de bebidas</strong></a><small>Pedidos · estoque · entregas</small><b>↗</b></div>
+          <div><span>04</span><a class="segment-link" href="/segmentos/bares-e-restaurantes"><strong>Bares e restaurantes</strong></a><small>Pedidos · atendimento · operação</small><b>↗</b></div>
+          <div><span>05</span><a class="segment-link" href="/segmentos/padarias"><strong>Padarias</strong></a><small>Produção · vendas · estoque</small><b>↗</b></div>
+          <div><span>06</span><a class="segment-link" href="/segmentos/lanchonetes-e-docerias"><strong>Lanchonetes e docerias</strong></a><small>Pedidos · delivery · caixa</small><b>↗</b></div>
+          <div><span>07</span><a class="segment-link" href="/segmentos/mercearias-e-mercados"><strong>Mercearias e mercados</strong></a><small>PDV · estoque · financeiro</small><b>↗</b></div>
+          <div><span>08</span><a class="segment-link" href="/varejo"><strong>Varejo</strong></a><small>Venda · estoque · financeiro</small><b>↗</b></div>
+          <div><span>09</span><a class="segment-link" href="/supermercados"><strong>Supermercados</strong></a><small>Compras · perdas · margem</small><b>↗</b></div>
+          <div><span>10</span><a class="segment-link" href="/restaurantes"><strong>Restaurantes</strong></a><small>Atendimento · produção · entrega</small><b>↗</b></div>
+          <div><span>11</span><a class="segment-link" href="/lojas"><strong>Lojas</strong></a><small>Venda · estoque · caixa</small><b>↗</b></div>
+          <div><span>12</span><a class="segment-link" href="/conveniencias"><strong>Conveniências</strong></a><small>PDV · estoque · financeiro</small><b>↗</b></div>
+          <div><span>13</span><a class="segment-link" href="/multilojas"><strong>Multilojas</strong></a><small>Integração · visão · controle</small><b>↗</b></div>
         </div>
       </div>
     </section>

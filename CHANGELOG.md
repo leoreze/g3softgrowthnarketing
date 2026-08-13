@@ -1,3 +1,42 @@
+## 1.0.28 — Relationship Center + Content Engine UX
+
+- Corrigido bug de UUID no módulo de Marketing/Relacionamento.
+- CRM Growth padronizado visualmente com o restante do CRM.
+- Content Engine reorganizado por semana, canal e status.
+- Growth Relationship Center operacional com 7 módulos e 8 playbooks.
+- Favicon G3 aplicado aos entry points públicos.
+
+# v1.0.26 — Growth Calendar + Relationship Center
+
+- Calendário de 6 meses / 26 semanas.
+- Plano orgânico, pago, próprio e relacionamento por canal.
+- 6 campanhas blueprint prontas para criação no CRM.
+- Playbooks de relacionamento inspirados na arquitetura do arquitetura modular de relacionamento, adaptados ao B2B G3Soft.
+- Novo workspace Growth & Marketing: Calendário, Canais & Tráfego, Campanhas, Relacionamento.
+- Migration 024 incremental, sem reset.
+
+# Changelog
+
+## 1.0.25 — Strategy Foundation
+- Added Strategy as a first-class Growth OS object.
+- Added Message House, value pillars, ICPs, segments, products and proof library.
+- Added canonical Message Matrix linking strategy to Landing Pages and campaigns.
+- Added CRM Strategy workspace under Growth & Marketing.
+- Added campaign and Landing Page draft generation from Message Matrix.
+- Added strategy-aware Landing Page catalog in CRM.
+- Added incremental migration 023_strategy_foundation.sql.
+- Preserved existing CRM, Kanban, campaign and Landing Page Engine architecture.
+- No destructive database operations.
+
+## 1.0.23 — Growth Revenue Engine
+
+- CRM conectado a site e landing pages.
+- Attribution UTM/GCLID/FBCLID/referrer + first/last touch.
+- Tracking links por LP e campanha.
+- Growth & Marketing workspace.
+- WhatsApp queue, templates e automações preparadas.
+- Sem reset de banco; migration 021 incremental.
+
 ## v0.2.0 — Landing Page Engine
 
 ### Premium visual refresh

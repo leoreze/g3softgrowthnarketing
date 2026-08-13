@@ -23,4 +23,4 @@ test('v1.0.21 keeps production secrets out of the Blueprint',()=>{
   assert.match(yaml,/key:\s*SESSION_SECRET[\s\S]*sync:\s*false/);
 });
 
-test('v1.0.22 version is 1.0.22',()=>assert.equal(JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version,'1.0.22'));
+test('v1.0.25 version is 1.0.25',()=>assert.equal(JSON.parse(fs.readFileSync(path.join(root,'package.json'),'utf8')).version,'1.0.28'));

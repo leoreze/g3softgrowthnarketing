@@ -1,6 +1,6 @@
 {
   "name": "g3soft-growth-os",
-  "version": "1.0.22",
+  "version": "1.0.28",
   "private": true,
   "description": "G3Soft Growth OS — Growth Command Center with 180-day roadmap, execution evidence, approvals, CRUD and 360° Diagnostic Intelligence Workspace.",
   "main": "src/server.js",
@@ -11,7 +11,7 @@
     "db:seed": "node src/db/seed.js",
     "db:setup": "node src/db/setup.js",
     "db:reset": "node src/db/reset.js",
-    "check": "node --check src/server.js && node --check src/app.js && node --check src/routes/auth.js && node --check src/routes/approvals.js && node --check src/routes/content.js && node --check src/routes/calendar-events.js && node --check src/routes/notifications.js && node --check src/services/automation.js && node --check public/js/app.js && node --check public/js/crm-premium.js",
+    "check": "node --check src/server.js && node --check src/app.js && node --check src/routes/auth.js && node --check src/routes/approvals.js && node --check src/routes/content.js && node --check src/routes/calendar-events.js && node --check src/routes/notifications.js && node --check src/services/automation.js && node --check public/js/app.js && node --check public/js/crm-premium.js && node --check src/routes/marketing.js && node --check src/services/marketing.js",
     "test": "node --test",
     "build": "npm run check",
     "verify": "npm run check && npm test",

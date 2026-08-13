@@ -85,7 +85,7 @@ test('v1.0.6 preserves CSP-safe frontend and requested microtask spacing',()=>{
 });
 
 test('v1.0.6 preserves semantic versioning and remains based on v1.0.5 baseline',()=>{
-  assert.match(pkg.version,/^1\.0\.(?:6|7|8|9|10|11|12|14|15|16|17|18|19|20|21|21|22)$/);
+  assert.match(pkg.version,/^1\.0\.(?:6|7|8|9|10|11|12|14|15|16|17|18|19|20|21|21|22|23|25|27|28)$/);
   assert.match(fs.readFileSync(path.join(root,'tests/v105.task-comment-regression.test.js'),'utf8'),/v1\.0\.5/);
   assert.match(fs.readFileSync(path.join(root,'src/db/migrations/014_task_execution_center.sql'),'utf8'),/Task Execution Center/);
 });

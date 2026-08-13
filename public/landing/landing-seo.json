@@ -50,5 +50,33 @@
   "calculadora-de-perdas": {
     "title": "Calculadora de perdas empresariais | G3Soft",
     "description": "Estime perdas anuais com retrabalho, desperdícios e custos operacionais e descubra onde sua empresa pode buscar mais eficiência."
+  },
+  "loja-de-roupas": {
+    "title": "Sistema para loja de roupas | Vendas, estoque e gestão | G3Soft",
+    "description": "Sistema de gestão para loja de roupas com vendas, estoque, clientes, caixa, financeiro e relatórios."
+  },
+  "loja-de-conveniencias": {
+    "title": "Sistema para loja de conveniências | PDV e estoque | G3Soft",
+    "description": "Gestão para lojas de conveniências com PDV, estoque, vendas, caixa, financeiro e relatórios."
+  },
+  "deposito-de-bebidas": {
+    "title": "Sistema para depósito de bebidas | Pedidos, estoque e vendas | G3Soft",
+    "description": "Sistema de gestão para depósitos de bebidas com pedidos, estoque, vendas, caixa, entregas e financeiro."
+  },
+  "bares-e-restaurantes": {
+    "title": "Sistema para bares e restaurantes | Pedidos e gestão | G3Soft",
+    "description": "Sistema para bares e restaurantes com pedidos, atendimento, produção, delivery, caixa, financeiro e relatórios."
+  },
+  "padarias": {
+    "title": "Sistema para padarias | Vendas, estoque e gestão | G3Soft",
+    "description": "Sistema de gestão para padarias com vendas, produção, estoque, caixa, financeiro e relatórios."
+  },
+  "lanchonetes-e-docerias": {
+    "title": "Sistema para lanchonetes e docerias | Pedidos e gestão | G3Soft",
+    "description": "Sistema para lanchonetes e docerias com pedidos, produção, delivery, caixa, estoque e gestão."
+  },
+  "mercearias-e-mercados": {
+    "title": "Sistema para mercearias e mercados | PDV, estoque e gestão | G3Soft",
+    "description": "Sistema de gestão para mercearias e mercados com PDV, estoque, vendas, compras, caixa e financeiro."
   }
 }

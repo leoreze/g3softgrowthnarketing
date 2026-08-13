@@ -3,6 +3,7 @@ const env=require('./config/env');
 const pkg=require('../package.json');
 const pool=require('./db/pool');
 const {runAutomations}=require('./services/automation');
+const {processMessageQueue}=require('./services/marketing');
 
 let automationTimer=null;
 let automationEnabled=false;
@@ -14,7 +15,7 @@ async function canRunAutomations(){
     return ready;
   }catch(error){console.warn(`[automation] preflight unavailable: ${error.message}`);return false;}
 }
-async function tick(){if(!automationEnabled) return;try{await runAutomations()}catch(error){console.error(`[automation] ${error.message}`)}}
+async function tick(){if(!automationEnabled) return;try{await runAutomations();await processMessageQueue()}catch(error){console.error(`[automation] ${error.message}`)}}
 async function start(){
   const server=app.listen(env.port,'0.0.0.0',async()=>{
     console.log(`G3Soft Growth OS v${pkg.version} running on http://localhost:${env.port}`);

@@ -36,15 +36,32 @@ app.use('/api',(req,res,next)=>{
 app.get('/api/health',async(req,res)=>{try{await pool.query('SELECT 1');res.json({data:{status:'ok',version:pkg.version,requestId:req.id}})}catch(e){res.status(503).json({error:'DB_UNAVAILABLE',message:'Serviço temporariamente indisponível.',requestId:req.id})}});
 app.get('/api/ready',async(req,res)=>{try{const r=await pool.query("SELECT to_regclass('public.schema_migrations') AS schema_migrations, to_regclass('public.automation_rules') AS automation_rules, to_regclass('public.notifications') AS notifications, to_regclass('public.task_acceptance_criteria') AS task_acceptance_criteria, to_regclass('public.task_evidence_requirements') AS task_evidence_requirements, to_regclass('public.task_evidence') AS task_evidence, EXISTS(SELECT 1 FROM information_schema.columns WHERE table_schema='public' AND table_name='tasks' AND column_name='execution_type') AS task_execution_type");const row=r.rows[0];const checks={schemaMigrations:Boolean(row.schema_migrations),automationRules:Boolean(row.automation_rules),notifications:Boolean(row.notifications),taskAcceptanceCriteria:Boolean(row.task_acceptance_criteria),taskEvidenceRequirements:Boolean(row.task_evidence_requirements),taskEvidence:Boolean(row.task_evidence),taskExecutionType:Boolean(row.task_execution_type)};const ready=Object.values(checks).every(Boolean);let migrationRequired=null;if(!ready&&checks.schemaMigrations){const m=await pool.query("SELECT 1 FROM schema_migrations WHERE version='015'");if(!m.rowCount)migrationRequired='016_task_execution_schema_repair';}res.status(ready?200:503).json({data:{status:ready?'ready':'not_ready',version:pkg.version,requestId:req.id,checks,migrationRequired}})}catch(e){res.status(503).json({error:'NOT_READY',message:'Dependências ainda não estão prontas.',requestId:req.id})}});
 
+const marketingRoutes=require('./routes/marketing');
+app.use('/api/public/marketing',marketingRoutes.publicRouter);
+app.use('/api/crm/marketing',marketingRoutes.admin);
 app.use('/api/auth',require('./routes/auth'));app.use('/api/campaigns',require('./routes/campaigns'));app.use('/api/phases',require('./routes/phases'));app.use('/api/tasks',require('./routes/tasks'));
 app.use('/api/work',require('./routes/work-management'));app.use('/api/calendar',require('./routes/calendar'));app.use('/api/calendar-events',require('./routes/calendar-events'));app.use('/api/dashboard',require('./routes/dashboard'));app.use('/api/audit',require('./routes/audit'));app.use('/api/approvals',require('./routes/approvals'));app.use('/api/workflows',require('./routes/workflows'));app.use('/api/content',require('./routes/content'));app.use('/api/analytics',require('./routes/analytics'));app.use('/api/notifications',require('./routes/notifications'));app.use('/api/automations',require('./routes/automations'));app.use('/api/diagnostics',require('./routes/diagnostics'));app.use('/api/crm',require('./routes/crm'));
 app.get(/^\/g3soft\/?$/, (req,res)=>{
   res.sendFile(path.join(__dirname,'../public/g3soft/index.html'));
 });
-const landingSlugs=new Set(['g3erp','g3control','g3food','g3pedidos','g3small','varejo','supermercados','restaurantes','lojas','conveniencias','multilojas','descubra-seu-g3','calculadora-de-perdas']);
+app.get(/^\/r\/([A-Za-z0-9_-]{6,32})\/?$/,async(req,res,next)=>{try{const r=await pool.query(`SELECT l.*,p.path AS landing_path FROM marketing_tracking_links l LEFT JOIN marketing_landing_pages p ON p.id=l.landing_page_id WHERE l.code=$1 AND l.active=true`,[req.params[0]]);const link=r.rows[0];if(!link)return res.status(404).send('Link não encontrado.');await pool.query('UPDATE marketing_tracking_links SET clicks=clicks+1,updated_at=NOW() WHERE id=$1',[link.id]);const target=new URL(link.landing_path||'/g3soft', (process.env.G3_PUBLIC_URL||`${req.protocol}://${req.get('host')}`).replace(/\/$/,''));for(const [k,v] of [['utm_source',link.source],['utm_medium',link.medium],['utm_campaign',link.campaign],['utm_term',link.term],['utm_content',link.content]])if(v)target.searchParams.set(k,v);target.searchParams.set('g3_link',link.code);res.redirect(302,target.toString());}catch(e){next(e)}});
+const landingSlugs=new Set(['g3erp','g3control','g3food','g3pedidos','g3small','varejo','supermercados','restaurantes','lojas','conveniencias','multilojas','loja-de-roupas','loja-de-conveniencias','deposito-de-bebidas','bares-e-restaurantes','padarias','lanchonetes-e-docerias','mercearias-e-mercados','descubra-seu-g3','calculadora-de-perdas']);
 const landingSeo=JSON.parse(fs.readFileSync(path.join(__dirname,'../public/landing/landing-seo.json'),'utf8'));
 const escapeHtml=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
-app.get(/^\/(g3erp|g3control|g3food|g3pedidos|g3small|varejo|supermercados|restaurantes|lojas|conveniencias|multilojas|descubra-seu-g3|calculadora-de-perdas)\/?$/, (req,res)=>{
+app.get(/^\/segmentos\/(loja-de-roupas|loja-de-conveniencias|deposito-de-bebidas|bares-e-restaurantes|padarias|lanchonetes-e-docerias|mercearias-e-mercados)\/?$/, (req,res)=>{
+  const slug=req.path.replace(/^\/segmentos\//,'').replace(/\/$/,'').toLowerCase();
+  const meta=landingSeo[slug]||landingSeo.varejo;
+  const publicUrl=(process.env.G3_PUBLIC_URL||`${req.protocol}://${req.get('host')}`).replace(/\/$/,'');
+  const canonical=`${publicUrl}/segmentos/${slug}`;
+  const template=fs.readFileSync(path.join(__dirname,'../public/landing/index.html'),'utf8');
+  const html=template.replace('<title>G3Soft | Gestão que transforma dados em crescimento</title>',`<title>${escapeHtml(meta.title)}</title>`)
+    .replace('<meta name="description" content="G3Soft — tecnologia de gestão para transformar operação, informação e dados em crescimento.">',`<meta name="description" content="${escapeHtml(meta.description)}">`)
+    .replace('<meta property="og:title" content="G3Soft | Gestão que transforma dados em crescimento">',`<meta property="og:title" content="${escapeHtml(meta.title)}">`)
+    .replace('<meta property="og:description" content="Soluções de gestão para empresas que querem mais controle, clareza e capacidade de crescer.">',`<meta property="og:description" content="${escapeHtml(meta.description)}">`)
+    .replace('<link rel="canonical" href="/g3erp">',`<link rel="canonical" href="${escapeHtml(canonical)}">`);
+  res.type('html').send(html);
+});
+app.get(/^\/(g3erp|g3control|g3food|g3pedidos|g3small|varejo|supermercados|restaurantes|lojas|conveniencias|multilojas|loja-de-roupas|loja-de-conveniencias|deposito-de-bebidas|bares-e-restaurantes|padarias|lanchonetes-e-docerias|mercearias-e-mercados|descubra-seu-g3|calculadora-de-perdas)\/?$/, (req,res)=>{
   const slug=req.path.replace(/^\/+|\/+$/g,'').toLowerCase();
   const meta=landingSeo[slug]||landingSeo.g3erp;
   const publicUrl=(process.env.G3_PUBLIC_URL||`${req.protocol}://${req.get('host')}`).replace(/\/$/,'');

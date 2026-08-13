@@ -141,7 +141,7 @@ docs/
 
 ## Development database flow
 
-For development, the G3Soft Growth OS follows the same simple provisioning flow used by the PetFunny OS pattern: run migrations, then run the idempotent seed. A remote Render PostgreSQL database is allowed when `NODE_ENV=development`; production remains protected.
+For development, the G3Soft Growth OS follows the same simple provisioning flow used by the G3Soft OS pattern: run migrations, then run the idempotent seed. A remote Render PostgreSQL database is allowed when `NODE_ENV=development`; production remains protected.
 
 ```powershell
 npm install
